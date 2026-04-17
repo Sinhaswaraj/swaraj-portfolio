@@ -450,3 +450,85 @@ body {
     border-radius: 20px;
     color: var(--text-main);
 }
+
+
+/* =========================================
+   📱 Mobile Responsive Design (Media Queries)
+========================================= */
+
+@media (max-width: 768px) {
+    /* --- General Fixes --- */
+    section {
+        padding: 50px 5% !important; /* প্যাডিং কমিয়ে দিলাম যাতে মোবাইলে ফিট হয় */
+    }
+    
+    .pagination {
+        display: none; /* মোবাইলের ছোট স্ক্রিনে ডানদিকের ডটগুলো লুকিয়ে ফেললাম */
+    }
+
+    .nav-center {
+        display: none; /* মোবাইলে বড় মেনু হাইড করে দিলাম (পরে হ্যামবার্গার মেনু বানাবো) */
+    }
+
+    /* --- Section 01: Hero Fixes (যদি ঘেঁটে গিয়ে থাকে) --- */
+    .hero-main {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 30px;
+    }
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    /* --- Section 02: About Fixes --- */
+    .about-container {
+        flex-direction: column !important; /* 👈 ম্যাজিক: ছবি আর লেখা নিচে নিচে চলে আসবে */
+        gap: 30px;
+    }
+    
+    .matchstick-animation {
+        width: 100%;
+        height: 300px; /* উচ্চতা কমালাম */
+    }
+    
+    .match-bg {
+        width: 220px; /* মোবাইলের জন্য কাঠির সাইজ ছোট করলাম */
+    }
+    
+    .match-moving {
+        width: 55px;
+        bottom: 15%; /* পজিশন অ্যাডজাস্ট করলাম */
+    }
+
+    .about-content-right {
+        width: 100%; /* পুরো স্ক্রিন নেবে */
+        align-items: center; /* লেখাগুলো মাঝখানে থাকবে */
+        text-align: center;
+    }
+    
+    .sec-title {
+        font-size: 2.5rem; /* ফন্ট ছোট করলাম */
+    }
+    
+    .skill-tags-vertical {
+        align-items: center; /* ট্যাগগুলো মাঝখানে আনলাম */
+    }
+
+    /* --- Section 03: Skills Grid Fixes --- */
+    .skills-container {
+        flex-direction: column !important;
+        gap: 40px;
+    }
+    
+    .skills-content-left {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skills-grid-right {
+        width: 100%;
+        grid-template-columns: 1fr; /* 👈 ম্যাজিক: ২ কলামের গ্রিড এখন ১ কলাম হয়ে যাবে (নিচে নিচে) */
+        gap: 15px;
+    }
+}
