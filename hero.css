@@ -1,0 +1,159 @@
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-main {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    position: relative;
+}
+
+.left-content {
+    max-width: 400px;
+    z-index: 5;
+}
+
+.name-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 6rem;
+    line-height: 0.9;
+    margin-bottom: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-bottom: 50px;
+    display: block;
+}
+
+.power-section h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.power-section p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    opacity: 0.7;
+}
+
+/* Portrait */
+/* css/hero.css - নতুন কোড */
+.portrait-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* ছবির প্রস্থ ৮০% করবো ফুল-স্ক্রিনের */
+    width: 95vw;
+    /* বর্ডার, ব্যাকগ্রাউন্ড, শ্যাডো সব সরিয়ে দেবো যাতে Seamless দেখায় */
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    /* ছবির z-index কমিয়ে ছবিটা টেক্সটের নিচে রাখবো */
+    z-index: 1;
+}
+/* css/hero.css - নতুন কোড */
+.portrait-container img {
+    width: 100%;
+    /* উচ্চতা ফুল-স্ক্রিন করবো (বা একটু কম) */
+    height: 95vh;
+    /* object-fit: contain করবো যাতে ছবিটা কেটে না যায় */
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.portrait-container:hover img {
+    filter: grayscale(0%);
+}
+
+.info-tag {
+    position: absolute;
+    background: var(--tag-bg);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-tag::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--accent-orange);
+    border-radius: 50%;
+}
+
+/* css/hero.css - নতুন কোড */
+/* repositin the tags relative to page width and height */
+.tag-1 {
+    top: 25%; /* পেজের টপ থেকে ২৫% নিচে */
+    right: 23%; /* পেজের রাইট থেকে 20% বামে */
+}
+.tag-2 {
+    bottom: 35%; /* পেজের বটম থেকে ৩৫% ওপরে */
+    right: 27%; /* পেজের রাইট থেকে 25% বামে */
+}
+
+/* --- Scroll Mouse Indicator --- */
+.scroll-mouse {
+    position: absolute !important;
+    bottom: 40px; /* নিচ থেকে কতটা ওপরে থাকবে */
+    left: 60px;   /* বাম দিক থেকে কতটা সরে থাকবে (নেভিগেশনের সাথে মেলানো) */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    opacity: 0.8;
+    z-index: 10;
+    font-family: 'Syne', sans-serif; /* ফন্টটা একটু স্টাইলিশ করার জন্য */
+}
+
+.mouse-icon {
+    width: 22px;
+    height: 34px;
+    border: 2px solid var(--text-main);
+    border-radius: 12px;
+    position: relative;
+}
+
+/* মাউসের ভেতরের স্ক্রল হুইল (ডট) */
+.mouse-icon::after {
+    content: '';
+    width: 2px;
+    height: 6px;
+    background: var(--accent-orange);
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    animation: scroll-anim 1.5s infinite; /* অ্যানিমেশন চালু হলো */
+}
+
+/* স্ক্রল অ্যানিমেশনের কীফ্রেম */
+@keyframes scroll-anim {
+    0% { 
+        top: 6px; 
+        opacity: 1; 
+    }
+    100% { 
+        top: 18px; /* নিচে নামবে */
+        opacity: 0; /* মিলিয়ে যাবে */
+    }
+}
