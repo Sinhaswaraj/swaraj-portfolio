@@ -119,3 +119,86 @@ gsap.fromTo(".skill-card",
         }
     }
 );
+
+// ==========================================
+// F. Section 04: Projects Animation
+// ==========================================
+
+// 1. বড় হেডার কার্ডটা অ্যানিমেট হয়ে উঠবে
+gsap.fromTo(".projects-header-card", 
+    { y: 50, opacity: 0 }, 
+    {
+        y: 0, opacity: 1, duration: 0.8, ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#section-04",
+            start: "top 75%",
+        }
+    }
+);
+
+// 2. নিচের ৩টে প্রজেক্ট কার্ড একটা একটা করে উঠবে
+gsap.fromTo(".project-card", 
+    { y: 50, opacity: 0 }, 
+    {
+        y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#section-04",
+            start: "top 60%", // হেডার কার্ড ওঠার একটু পরে শুরু হবে
+        }
+    }
+);
+
+
+
+// ==========================================
+// G. Section 05: Contact Animation
+// ==========================================
+
+gsap.fromTo(".contact-content-left", 
+    { y: 50, opacity: 0 }, 
+    {
+        y: 0, opacity: 1, duration: 1, ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#section-05",
+            start: "top 70%",
+        }
+    }
+);
+
+// দেশলাই কাঠিটা হালকা ফেড ইন হবে
+gsap.fromTo(".standing-match", 
+    { opacity: 0, scale: 0.8 }, 
+    {
+        opacity: 1, scale: 1, duration: 1.2, ease: "back.out(1.5)",
+        scrollTrigger: {
+            trigger: "#section-05",
+            start: "top 60%",
+        }
+    }
+);
+
+// ==========================================
+// H. Dynamic Pagination (100% Working GSAP)
+// ==========================================
+const sectionIds = ["#section-01", "#section-02", "#section-03", "#section-04", "#section-05"];
+const pageNumbers = document.querySelectorAll(".page-num");
+
+sectionIds.forEach((id, index) => {
+    ScrollTrigger.create({
+        trigger: id,
+        start: "top 50%",    // সেকশন স্ক্রিনের মাঝখানে এলে ট্রিগার হবে
+        end: "bottom 50%",   // সেকশন স্ক্রিনের মাঝখান থেকে বেরিয়ে গেলে শেষ হবে
+        onToggle: (self) => {
+            // self.isActive মানে হলো সেকশনটা এখন স্ক্রিনে আছে
+            if (self.isActive) {
+                // ১. প্রথমে সবার থেকে active-num ক্লাস রিমুভ করে দাও
+                pageNumbers.forEach(num => num.classList.remove("active-num"));
+                
+                // ২. যেই সেকশনটা স্ক্রিনে আছে, শুধু তার নাম্বারে active-num অ্যাড করো
+                if (pageNumbers[index]) {
+                    pageNumbers[index].classList.add("active-num");
+                }
+            }
+        }
+    });
+});

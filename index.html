@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swaraj | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="hero.css">
-    <!-- <link rel="stylesheet" href="animations.css"> -->
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <!-- <link rel="stylesheet" href="css/animations.css"> -->
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-    <section class="hero-section">
-        <nav class="nav-bar">
+    <section class="hero-section" id="section-01"> <nav class="nav-bar">
             <div class="logo-text">PORTFOLIO.</div>
 
             <ul class="nav-center">
@@ -41,25 +42,31 @@
         <div class="hero-main">
             <div class="left-content">
                 <h1 class="name-title">Swaraj</h1>
-                <span class="subtitle">Aspiring Software Developer | Data Analyst</span>
+                
+                <h2 class="role-title">Data Analyst</h2>
+                
+                <span class="subtitle">Turning Data <br> into Actionable Insights</span>
                 
                 <div class="power-section">
                     <h3>Core Competencies</h3>
-                    <p>Develops Scalable Solutions, Strong in Python and JS, Proficient in Data Analysis & Visualization, Creates Modern Web Experiences.</p>
+                    <p>Skilled in Python, SQL, and data visualization, with a strong focus on building intuitive dashboards and solving real-world business problems through data.</p>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#" class="cta-btn">Download Resume</a>
                 </div>
             </div>
-             <div class="hero-main">
-            </div>
-        
-        <div class="scroll-mouse">
-            <div class="mouse-icon"></div>
-            <span>Scroll Mouse</span>
         </div>
+            
+            <div class="scroll-mouse">
+                <div class="mouse-icon"></div>
+                <span>Scroll Mouse</span>
+            </div>
 
             <div class="portrait-container">
-                <img src="swaraj-photo.png" alt="Swaraj" class="hero-img" onerror="this.src='https://via.placeholder.com/450x550/e9e3d5/29402f?text=Photo+Not+Found'">
-                <div class="info-tag tag-1">Analytic Precision</div>
-                <div class="info-tag tag-2">Clean Code Expert</div>
+                <img src="images/swaraj-photo.png" alt="Swaraj" class="hero-img" onerror="this.src='https://via.placeholder.com/450x550/e9e3d5/29402f?text=Photo+Not+Found'">
+                <div class="info-tag tag-1">Data-Driven Insights</div>
+                <div class="info-tag tag-2">Dashboard Design</div>
             </div>
         </div>
         
@@ -69,8 +76,8 @@
         <div class="about-container">
             
             <div class="matchstick-animation">
-                <img src="burnt-matches.png" alt="Burnt Matches" class="match-bg">
-                <img src="fresh-match.png" alt="Fresh Match" class="match-moving">
+                <img src="images/burnt-matches.png" alt="Burnt Matches" class="match-bg">
+                <img src="images/fresh-match.png" alt="Fresh Match" class="match-moving">
             </div>
 
             <div class="about-content-right">
@@ -81,16 +88,19 @@
                 </div>
                 
                 <div class="text-group">
-                    <h3 class="greeting">Hello, I'm Swaraj.</h3>
+                    <h3 class="greeting">Hello, I’m Swaraj.</h3>
                     <p class="desc">
-                        A data-driven developer crafting solutions where complex analysis meets elegant design. Bridging the gap between code and precision.
+                        A data analyst passionate about transforming raw data into meaningful insights. I specialize in analyzing complex datasets, building intuitive dashboards, and delivering clear, data-driven solutions that support smarter business decisions.
+                    </p>
+                    <p class="spark-quote" style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; color: var(--accent-orange); border-left: 2px solid var(--accent-orange); padding-left: 12px; margin-top: 5px;">
+                        “A single spark can turn data into powerful insights.”
                     </p>
                 </div>
                 
                 <div class="skill-tags-vertical">
-                    <span class="tag-outline">Software craftsmanship</span>
-                    <span class="tag-outline">Analytical precision</span>
-                    <span class="tag-outline">Clean architecture</span>
+                    <span class="tag-outline">Data Analysis</span>
+                    <span class="tag-outline">SQL & Python</span>
+                    <span class="tag-outline">Dashboard Design</span>
                 </div>
             </div>
 
@@ -107,37 +117,40 @@
                 </div>
                 
                 <div class="text-group">
-                    <h3 class="greeting">My Technical Arsenal.</h3>
+                    <h3 class="greeting">Hello, I’m Swaraj.</h3>
                     <p class="desc">
-                        A carefully curated stack of tools and technologies I use to turn complex data into actionable insights and build seamless digital experiences.
+                        A data analyst focused on extracting insights from data and presenting them through intuitive, well-designed dashboards. I combine analytical thinking with a strong sense of UI/UX to make data easy to understand and act upon.
                     </p>
                 </div>
 
                 <div class="skill-tags-vertical">
-                    <span class="tag-outline">Continuous Learner</span>
-                    <span class="tag-outline">Problem Solver</span>
+                    <span class="tag-outline">Data Analysis</span>
+                    <span class="tag-outline">SQL & Databases</span>
+                    <span class="tag-outline">Dashboard Design</span>
                 </div>
             </div>
 
             <div class="skills-grid-right">
+                
                 <div class="skill-card">
                     <div class="card-header">
-                        <span class="card-icon">🐍</span> <h4>Python</h4>
+                        <span class="card-icon">🐍</span> 
+                        <h4>Python</h4>
                     </div>
-                    <p>Automating processes, data manipulation, and back-end development.</p>
+                    <p>Used for data analysis, automation, and data manipulation using Pandas and NumPy.</p>
                     <div class="card-footer">
-                        <span class="card-tag">Backend & Data</span>
+                        <span class="card-tag">Python</span>
                     </div>
                 </div>
 
                 <div class="skill-card">
                     <div class="card-header">
-                        <span class="card-icon">⚡</span>
-                        <h4>JavaScript (JS)</h4>
+                        <span class="card-icon">🗄️</span>
+                        <h4>SQL</h4>
                     </div>
-                    <p>Creating dynamic and interactive web applications and animations.</p>
+                    <p>Writing efficient queries to extract, transform, and analyze structured data from databases.</p>
                     <div class="card-footer">
-                        <span class="card-tag">Frontend UI</span>
+                        <span class="card-tag">SQL</span>
                     </div>
                 </div>
 
@@ -146,44 +159,184 @@
                         <span class="card-icon">📊</span>
                         <h4>Data Visualization</h4>
                     </div>
-                    <p>Transforming complex datasets into clear, actionable visual insights.</p>
+                    <p>Designing clear and interactive dashboards using Power BI and visualization libraries.</p>
                     <div class="card-footer">
-                        <span class="card-tag">Tableau, Matplotlib</span>
+                        <span class="card-tag">Power BI</span>
                     </div>
                 </div>
 
                 <div class="skill-card">
                     <div class="card-header">
                         <span class="card-icon">🧹</span>
-                        <h4>Data Cleaning</h4>
+                        <h4>Data Cleaning & Wrangling</h4>
                     </div>
-                    <p>Cleaning and organizing raw data into useful, structured formats.</p>
+                    <p>Preparing raw data by handling missing values, duplicates, and inconsistencies.</p>
                     <div class="card-footer">
-                        <span class="card-tag">Pandas, Numpy</span>
+                        <span class="card-tag">Pandas</span>
                     </div>
                 </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <section class="projects-section" id="section-04">
+        <div class="projects-container">
+            
+            <div class="projects-header-flat">
+                <span class="sec-number">04 / FEATURED PROJECTS</span>
+                <h2 class="sec-title">MY WORK</h2>
+                <h3 class="sec-subtitle" style="font-size: 1.05rem; color: var(--accent-orange); margin-bottom: 5px; text-transform: none; letter-spacing: 0.5px; line-height: 1.5;">
+                    Turning data into actionable insights through analysis and visualization.
+                </h3>
+                <p class="desc">
+                    Real-world projects focused on solving business problems using data.
+                </p>
+                <div class="filter-tags">
+                    <span class="tag-outline">Data Analysis</span>
+                    <span class="tag-outline">Dashboards</span>
+                    <span class="tag-outline">Case Studies</span>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="card-image">
+                        <img src="/images/project1.jpg" alt="E-Commerce Dashboard">
+                    </div>
+                    <div class="card-header">
+                        <span class="card-icon">🛒</span>
+                        <h4>E-Commerce Sales Dashboard</h4>
+                    </div>
+                    <p>Analyzed sales data to identify trends, top products, and revenue drivers.</p>
+                    <div class="card-footer">
+                        <span class="card-tag">Python</span>
+                        <span class="card-tag">SQL</span>
+                        <span class="card-tag">Power BI</span>
+                    </div>
+                    <a href="#" class="view-btn">View Case Study</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-image">
+                        <img src="/images/project2.jpg" alt="IPL Analytics">
+                    </div>
+                    <div class="card-header">
+                        <span class="card-icon">🏏</span>
+                        <h4>IPL Performance Analysis</h4>
+                    </div>
+                    <p>Explored player and match data to uncover performance patterns and winning factors.</p>
+                    <div class="card-footer">
+                        <span class="card-tag">Python</span>
+                        <span class="card-tag">Pandas</span>
+                        <span class="card-tag">Data Vis</span>
+                    </div>
+                    <a href="#" class="view-btn">View Analysis</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-image">
+                        <img src="/images/project3.jpg" alt="Churn Analysis">
+                    </div>
+                    <div class="card-header">
+                        <span class="card-icon">🛡️</span>
+                        <h4>Customer Churn Analysis</h4>
+                    </div>
+                    <p>Identified key factors behind customer churn and suggested retention strategies.</p>
+                    <div class="card-footer">
+                        <span class="card-tag">Python</span>
+                        <span class="card-tag">SQL</span>
+                        <span class="card-tag">Power BI</span>
+                    </div>
+                    <a href="#" class="view-btn">View Insights</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact-section" id="section-05">
+        <div class="contact-container">
+            
+            <div class="contact-content-left">
+                <div class="heading-group">
+                    <span class="sec-number">05 / CONTACT</span>
+                    <h2 class="sec-title">LET'S WORK TOGETHER</h2>
+                </div>
+                
+                <h3 class="sec-subtitle" style="font-size: 1.05rem; color: var(--accent-orange); margin-bottom: 5px; text-transform: none; letter-spacing: 0.5px;">
+                    Have a project, opportunity, or collaboration in mind?
+                </h3>
+                <p class="desc">
+                    I’m open to data analyst roles, freelance projects, and collaborative opportunities. Feel free to reach out—let’s turn data into meaningful insights and business value.
+                </p>
+
+                <div class="contact-form-card">
+                    <form action="#" class="minimal-form">
+                        <input type="text" placeholder="Enter your full name" required>
+                        <input type="email" placeholder="Enter your email address" required>
+                        <textarea placeholder="Tell me about your project or opportunity" rows="3" required></textarea>
+                        
+                        <button type="submit" class="submit-btn">Let's Connect</button>
+                    </form>
+                </div>
+
+                <div class="social-links-bottom">
+                    <a href="https://github.com/yourusername" target="_blank" class="social-icon" title="GitHub">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon" title="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    
+                    <a href="mailto:your.email@gmail.com" class="social-icon" title="Email">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-visual-right">
+                <img src="images/1fresh-match.png" alt="Standing Match" class="standing-match">
             </div>
 
         </div>
     </section>
     
     <div class="pagination">
-                <span class="page-num current-page">01</span>
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <span class="page-num current-page">05</span>
-            </div>
+        <div class="page-item">
+            <span class="page-num">01</span>
+            <div class="page-line"></div>
+        </div>
+        <div class="page-item">
+            <span class="page-num">02</span>
+            <div class="page-line"></div>
+        </div>
+        <div class="page-item">
+            <span class="page-num">03</span>
+            <div class="page-line"></div>
+        </div>
+        <div class="page-item">
+            <span class="page-num">04</span>
+            <div class="page-line"></div>
+        </div>
+        <div class="page-item">
+            <span class="page-num">05</span>
+            <div class="page-line"></div>
+        </div>
+    </div>
+    
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-    <script src="smooth-scroll.js"></script>
-    <script src="animations.js"></script>
-    <script src="main.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

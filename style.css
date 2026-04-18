@@ -14,7 +14,7 @@
 
 body {
     background-color: var(--bg-color);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif; /* বডির সব টেক্সট Inter হবে */
     color: var(--text-main);
 }
 
@@ -34,8 +34,8 @@ body {
 
 /* 1. Logo Style */
 .logo-text {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.5rem;
+   font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: 1px;
     color: var(--text-main);
@@ -106,7 +106,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f1f1f2; 
+    background-color: #fdfdfd; 
 }
 
 /* =========================================
@@ -137,7 +137,7 @@ body {
 }
 
 .sec-title {
-    font-family: 'Syne', sans-serif;
+   font-family: 'Playfair Display', serif;
     font-size: 3.2rem; /* সাইজ পারফেক্ট করা হলো */
     font-weight: 800;
     color: var(--text-main);
@@ -169,6 +169,7 @@ body {
 }
 
 .desc {
+    line-height: 1.6;
     font-size: 1rem; /* ফন্ট সাইজ একটু কমিয়ে স্ট্যান্ডার্ড করা হলো */
     line-height: 1.6;
     color: var(--text-main);
@@ -207,6 +208,226 @@ body {
 }
 
 /* =========================================
+   Section 01: Hero Section (Perfect Editorial Vibe)
+========================================= */
+.hero-section {
+    min-height: 100vh;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 👈 সবকিছু স্ক্রিনের মাঝখানে সুন্দরভাবে থাকবে */
+    position: relative;
+}
+
+.hero-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+/* --- Left Side Typography & Perfect Alignment --- */
+.left-content {
+    .left-content h1,
+    .left-content h2,
+    .left-content h3,
+    .left-content p {
+    margin: 0;
+}
+    gap: 18px;   /* 🔥 ONLY THIS থাকবে */
+}
+
+.name-title {
+    line-height: 0.95;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(60px, 10vw, 120px); /* 👈 রেস্পন্সিভ এবং বিশাল ফন্ট! */
+    line-height: 1;
+    padding-bottom: 15px; /* 👈 'j' যাতে কোনোভাবেই না কাটে তার জন্য সেফটি প্যাডিং */
+    margin: 0;
+}
+
+.role-title {
+    line-height: 1.1;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--accent-orange);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    display: block;       /* 👈 ADD */
+    max-width: 380px;     /* 👈 ADD */
+}
+
+
+.power-section h3 {
+    margin-top: -20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: var(--text-main);
+}
+
+.power-section p {
+    margin-top: -20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(41, 64, 47, 0.8); /* 👈 #555 এর বদলে থিমের সাথে মিলিয়ে ডার্ক কালার */
+    margin: 0;
+}
+
+/* --- Single Premium CTA Button --- */
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: transparent;
+    color: var(--text-main);
+    border: 1.5px solid var(--text-main);
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: rgba(41, 64, 47, 0.05);
+    transform: translateY(-3px);
+}
+
+/* --- Right Side Portrait & Tags --- */
+.portrait-container {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.info-tag {
+    position: absolute;
+    background: var(--bg-color);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    z-index: 2;
+    border: 1px solid rgba(41, 64, 47, 0.1);
+}
+
+.tag-1 { top: 15%; right: -5%; }
+.tag-2 { bottom: 15%; right: -5%; }
+.tag-3 { top: 50%; right: -10%; }
+
+/* --- 🌟 Scroll Mouse Fix (Now fully visible & animated) --- */
+.scroll-mouse {
+    position: absolute;
+    bottom: 30px; /* 👈 একটু ওপরে তোলা হলো যাতে স্ক্রিনের বাইরে না যায় */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.6;
+}
+
+.mouse-icon {
+    width: 24px;
+    height: 38px;
+    border: 2px solid var(--text-main);
+    border-radius: 20px;
+    position: relative;
+}
+
+/*.mouse-icon::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 6px;
+    background: var(--text-main);
+    border-radius: 2px;
+    animation: scrollAnim 2s infinite; /* 👈 স্ক্রল অ্যানিমেশন 
+}*/
+
+@keyframes scrollAnim {
+    0% { top: 6px; opacity: 1; }
+    100% { top: 20px; opacity: 0; }
+}
+
+section {
+    padding: 100px 0;
+}
+/* =========================================
+   Hero Section Buttons
+========================================= */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* বাটনগুলোর সাধারণ স্টাইল */
+.btn-primary, .btn-secondary {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 14px 35px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* View My Work - সলিড বাটন */
+.btn-primary {
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    border: 1px solid var(--text-main);
+    box-shadow: 0 10px 20px rgba(41, 64, 47, 0.15);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(41, 64, 47, 0.25);
+}
+
+/* Download Resume - আউটলাইন বাটন */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid rgba(41, 64, 47, 0.3);
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-main);
+    background-color: rgba(41, 64, 47, 0.05); /* হোভার করলে হালকা ব্যাকগ্রাউন্ড */
+    transform: translateY(-3px);
+}
+
+/* =========================================
    Section 02: Layout & Images Fix
 ========================================= */
 
@@ -228,17 +449,6 @@ body {
     width: 45%; /* অর্ধেক জায়গা নেবে */
     height: 450px; 
 }
-
-/* 3. পোড়া কাঠির স্তূপ (Burnt Matches) 
-.match-bg {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%); /* বক্সের একদম মাঝখানে বসবে */
-    /*width: 350px; স্তূপের সাইজ (বড়-ছোট করতে চাইলে এই সংখ্যাটা বদলাবে) */
-    /*height: auto;
-    z-index: 2; /* 👈 এটা ওপরে থাকবে, যাতে নতুন কাঠিটা ভেতর থেকে বের হয় */
-/*}*/
 
 .match-bg {
     position: absolute;
@@ -265,21 +475,8 @@ body {
     /*transform: rotate(-50deg);  👈 আরও বেশি শোয়াতে চাইলে -80deg বা -90deg করে দেখো */
 }
 
-
-/* 5. ডান দিকের লেখা (যাতে জায়গা ঠিকঠাক নেয়) */
-.about-content-right {
-    width: 50%; /* বাকি অর্ধেক জায়গা নেবে */
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-    /* অ্যানিমেশনের জন্য নিচের অংশটি */
-    transform-origin: bottom center;
-    transform: rotate(-70deg); 
-
-
 .about-title {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 4rem;
     margin-bottom: 30px;
 }
@@ -319,7 +516,7 @@ body {
 .page-num { 
     font-size: 0.8rem; 
     font-weight: 600; 
-    font-family: 'Syne', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 .dot { 
@@ -411,7 +608,7 @@ body {
 }
 
 .card-header h4 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-main);
@@ -451,84 +648,322 @@ body {
     color: var(--text-main);
 }
 
+/* =========================================
+   Section 04: Featured Projects (Compact & Flat)
+========================================= */
+.projects-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10%; /* 👈 প্যাডিং কমানো হলো যাতে স্ক্রিনে ধরে */
+    background-color: var(--bg-color);
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1100px;
+    gap: 20px; /* 👈 গ্যাপ কমিয়ে দেওয়া হলো */
+    margin: 0 auto;
+}
+
+/* 1. Top Header - No Box (Flat Style) */
+.projects-header-flat {
+    background: none; /* 👈 বক্স সরিয়ে দেওয়া হলো */
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projects-header-flat .sec-title {
+    font-size: 3rem; /* 👈 সাইজ সামান্য ছোট করা হলো */
+    margin: 5px 0;
+}
+
+/* 2. Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* 3. Compact Project Card */
+.project-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(41, 64, 47, 0.1);
+    border-radius: 15px;
+    padding: 15px; /* 👈 কার্ডের ভেতরের জায়গা কমানো হলো */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background: #ffffff;
+    transform: translateY(-5px);
+}
+
+/* ইমেজের হাইট কমিয়ে কম্প্যাক্ট করা হলো */
+.card-image {
+    width: 100%;
+    height: 150px; /* 👈 180px থেকে কমিয়ে 150px করলাম */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card .card-header h4 {
+    font-size: 1.15rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.project-card p {
+    font-size: 0.85rem; /* 👈 প্যারাগ্রাফের ফন্ট ছোট করা হলো */
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+/* View Project Button */
+.view-btn {
+    text-align: center;
+    background: var(--text-main);
+    color: var(--bg-color);
+    padding: 10px 0;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
 
 /* =========================================
-   📱 Mobile Responsive Design (Media Queries)
+   Section 05: Contact Section (Compact & Flat)
+========================================= */
+.contact-section {
+    width: 100%;
+    height: 100vh; /* 👈 ম্যাজিক: পুরো সেকশনটাকে ঠিক এক স্ক্রিনের মাপে লক করে দেওয়া হলো */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%; /* 👈 ওপর-নিচের এক্সট্রা প্যাডিং জিরো করা হলো যাতে স্ক্রিনের বাইরে না যায় */
+    background-color: var(--bg-color);
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+/* Left Content */
+.contact-content-left {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 👈 লেখাগুলোর মাঝের ফাঁকা কমানো হলো */
+}
+
+/* 🌟 Form Card - Box Removed! */
+.contact-form-card {
+    background: transparent; /* 👈 বক্সের ব্যাকগ্রাউন্ড সরিয়ে দেওয়া হলো */
+    border: none; /* বর্ডার গায়েব */
+    padding: 0; /* ভেতরের এক্সট্রা জায়গা গায়েব */
+    margin-top: 10px;
+    box-shadow: none; /* শ্যাডো গায়েব */
+}
+
+.minimal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 👈 ইনপুট ফিল্ডগুলোর মাঝের গ্যাপ কমানো হলো */
+}
+
+/* Input Fields Style */
+.minimal-form input,
+.minimal-form textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid rgba(41, 64, 47, 0.3) !important;
+    padding: 10px 0 !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem !important;
+    color: var(--text-main);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.minimal-form input:focus,
+.minimal-form textarea:focus {
+    border-bottom: 1.5px solid var(--text-main) !important;
+}
+
+/* Submit Button */
+.submit-btn {
+    align-self: flex-start; 
+    background: var(--text-main) !important; /* সলিড ডার্ক গ্রিন */
+    color: var(--bg-color) !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 35px !important; /* 👈 বাটনের সাইজ একটু কম্প্যাক্ট করা হলো */
+    border: none !important;
+    border-radius: 40px !important;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(41, 64, 47, 0.2);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(41, 64, 47, 0.3);
+}
+
+/* Social Links Bottom */
+.social-links-bottom {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    color: var(--text-main);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+/* Right Visual (Matchstick) */
+.contact-visual-right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Glowing Matchstick */
+.standing-match {
+    height: 380px; /* 👈 কাঠির উচ্চতা ফিক্স করে দেওয়া হলো যাতে লেআউট নিচে না নামে */
+    width: auto;
+    filter: drop-shadow(0px -15px 25px rgba(255, 107, 53, 0.8));
+    animation: glowPulse 2s infinite alternate;
+}
+
+/* গ্লো অ্যানিমেশনের জন্য Keyframes */
+@keyframes glowPulse {
+    0% { filter: drop-shadow(0px -15px 20px rgba(255, 107, 53, 0.5)); }
+    100% { filter: drop-shadow(0px -15px 35px rgba(255, 107, 53, 0.9)); }
+}
+/* =========================================
+   🌟 FINAL POLISH: Typography, Pagination & Buttons
 ========================================= */
 
-@media (max-width: 768px) {
-    /* --- General Fixes --- */
-    section {
-        padding: 50px 5% !important; /* প্যাডিং কমিয়ে দিলাম যাতে মোবাইলে ফিট হয় */
-    }
-    
-    .pagination {
-        display: none; /* মোবাইলের ছোট স্ক্রিনে ডানদিকের ডটগুলো লুকিয়ে ফেললাম */
-    }
+/* 1. Global Typography Fixes */
+.sec-title, .about-heading, h1, h2, .logo-text {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
 
-    .nav-center {
-        display: none; /* মোবাইলে বড় মেনু হাইড করে দিলাম (পরে হ্যামবার্গার মেনু বানাবো) */
-    }
+.desc, p, .greeting, .sec-subtitle {
+    font-family: 'Inter', sans-serif;
+}
 
-    /* --- Section 01: Hero Fixes (যদি ঘেঁটে গিয়ে থাকে) --- */
-    .hero-main {
-        flex-direction: column !important;
-        text-align: center;
-        gap: 30px;
-    }
-    .hero-text h1 {
-        font-size: 3.5rem;
-    }
+/* 2. Editorial Pagination (Right Side) */
+.pagination {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 100;
+}
 
-    /* --- Section 02: About Fixes --- */
-    .about-container {
-        flex-direction: column !important; /* 👈 ম্যাজিক: ছবি আর লেখা নিচে নিচে চলে আসবে */
-        gap: 30px;
-    }
-    
-    .matchstick-animation {
-        width: 100%;
-        height: 300px; /* উচ্চতা কমালাম */
-    }
-    
-    .match-bg {
-        width: 220px; /* মোবাইলের জন্য কাঠির সাইজ ছোট করলাম */
-    }
-    
-    .match-moving {
-        width: 55px;
-        bottom: 15%; /* পজিশন অ্যাডজাস্ট করলাম */
-    }
+.page-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
 
-    .about-content-right {
-        width: 100%; /* পুরো স্ক্রিন নেবে */
-        align-items: center; /* লেখাগুলো মাঝখানে থাকবে */
-        text-align: center;
-    }
-    
-    .sec-title {
-        font-size: 2.5rem; /* ফন্ট ছোট করলাম */
-    }
-    
-    .skill-tags-vertical {
-        align-items: center; /* ট্যাগগুলো মাঝখানে আনলাম */
-    }
+.page-num {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-main);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
 
-    /* --- Section 03: Skills Grid Fixes --- */
-    .skills-container {
-        flex-direction: column !important;
-        gap: 40px;
-    }
-    
-    .skills-content-left {
-        width: 100%;
-        align-items: center;
-        text-align: center;
-    }
+.active-num {
+    opacity: 1 !important;
+    font-weight: 800 !important;
+    font-size: 1.1rem !important;
+    color: var(--text-main) !important;
+}
 
-    .skills-grid-right {
-        width: 100%;
-        grid-template-columns: 1fr; /* 👈 ম্যাজিক: ২ কলামের গ্রিড এখন ১ কলাম হয়ে যাবে (নিচে নিচে) */
-        gap: 15px;
-    }
+.page-line {
+    width: 1px;
+    height: 40px; /* লাইনের লম্বা সাইজ */
+    background-color: var(--text-main);
+    opacity: 0.2;
+}
+
+/* 3. Section 05: Solid Contact Button */
+.submit-btn {
+    background: var(--text-main) !important; /* সলিড ডার্ক গ্রিন */
+    color: var(--bg-color) !important;       /* লেখার রঙ ক্রিম/সাদা */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 15px 40px !important;
+    border: none !important;
+    border-radius: 40px !important;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(41, 64, 47, 0.2); /* সুন্দর শ্যাডো */
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(41, 64, 47, 0.3);
+}
+
+/* 4. Section 05: Form Inputs Polish */
+.minimal-form input,
+.minimal-form textarea {
+    border-bottom: 1.5px solid rgba(41, 64, 47, 0.3) !important;
+    padding: 12px 0 !important;
+    font-size: 1.05rem !important;
+}
+
+.minimal-form input:focus,
+.minimal-form textarea:focus {
+    border-bottom: 1.5px solid var(--text-main) !important;
 }
